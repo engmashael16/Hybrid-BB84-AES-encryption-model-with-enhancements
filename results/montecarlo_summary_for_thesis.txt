@@ -1,0 +1,8 @@
+Repeated-Trial Monte Carlo Design
+The disturbance comparison experiment was executed as a repeated-trial Monte Carlo simulation across 10 configured noise conditions (p_noise = 0.000, 0.025, 0.050, 0.075, 0.100, 0.110, 0.150, 0.175, 0.200, 0.250). For each condition, the full workflow was run 100 independent times using fresh random bit strings, basis choices, sampled positions, and noise realisations. The QBER threshold was held fixed at tau = 0.11. The reported results are aggregate statistics over these repeated runs.
+
+Interpretation Note
+In the source experiment file, the fields baseline_unsafe_pct and extended_unsafe_pct refer to the percentage of runs in which the estimated QBER exceeded tau. In the baseline model, such flagged runs would still proceed to encryption because no abort controller is active. In the extended model, the same flagged runs should be interpreted as abort-triggered sessions rather than unsafe encrypted sessions.
+
+Observed Range
+Across the recorded conditions, the percentage of baseline runs with estimated QBER > tau ranged from 0.00% to 99.00%. In the extended model, the percentage of runs with estimated QBER > tau ranged from 0.00% to 99.00%; under Extension 1, these sessions are treated as abort-triggered outcomes.
